@@ -1,13 +1,19 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <aside>
+    <aside className="sidebar">
+
       <h2>Categories</h2>
-      <nav aria-label="Product categories">
-        <NavLink to="electronics">Electronics</NavLink>
-        <NavLink to="fashion">Fashion</NavLink>
-      </nav>
+
+      <Link to="electronics">
+        Electronics
+      </Link>
+
+      <Link to="fashion">
+        Fashion
+      </Link>
+
     </aside>
   );
 }

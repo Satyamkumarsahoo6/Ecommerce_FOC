@@ -1,13 +1,25 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
   return (
-    <article className="product-card">
-      <img src={product.image} alt={product.name} />
+    <div className="product-card">
+
+      <img
+        src={product.image}
+        alt={product.name}
+      />
+
       <h2>{product.name}</h2>
-      <p>₹{product.price}</p>
-      <Link to={`/product/${product.id}`}>View details</Link>
-    </article>
+
+      <p>{product.category}</p>
+
+      <h3>₹{product.price}</h3>
+
+      <Link to={`/product/${product.id}`}>
+        <button>View Details</button>
+      </Link>
+
+    </div>
   );
 }
 
